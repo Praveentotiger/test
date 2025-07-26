@@ -1,19 +1,22 @@
 pipeline{ 
-  agent any 
+  agent any ;
   stages{  
     stage('build'){
             steps{ 
-                  echo 'hello' 
+                  echo "hello"
+                  sh 'sleep  5'
                   }
                   }
   stage('deploy'){
               steps{
-                  echo 'deploy'
-                  }
+                  echo "deploy in"
+                  sh 'sleep 5'
+}
                   }
 stage('test'){
               steps{
               echo 'testing'
+              sh 'sleep 6'
                   }
                   }
 }
