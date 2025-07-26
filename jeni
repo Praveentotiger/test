@@ -4,6 +4,6 @@ pipeline{
                 stage('build'){ steps{ echo "hello" } }
                 stage('deploy'){ steps{ echo "hello" } }
                 stage('test'){ steps{ echo "hello" } }
-                stage('qa'){ steps{ echo "hello" } }
+               
 }
 }
