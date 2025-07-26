@@ -1,9 +1,23 @@
-pipeline{
-        agent any;
-            stages{
-                stage('build'){ steps{ echo "hello" sh 'sleep 5' } }
-                stage('deploy'){ steps{ echo "hello" sh 'sleep 5'} }
-                stage('test'){ steps{ echo "hello" sh 'sleep 5'} }
-               
-}
+pipeline {
+  agent any
+  stages {
+    stage('build') {
+      steps {
+        echo 'hello'
+        sh 'sleep 5'
+      }
+    }
+    stage('deploy') {
+      steps {
+        echo 'hello'
+        sh 'sleep 5'
+      }
+    }
+    stage('test') {
+      steps {
+        echo 'hello'
+        sh 'sleep 5'
+      }
+    }
+  }
 }
