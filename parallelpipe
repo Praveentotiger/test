@@ -1,0 +1,10 @@
+pipeline{
+	
+			stages{
+			parallel{
+				stage('build1'){steps{echo "building"}	}
+					stage('build2'){steps{echo "building"}	}
+						stage('build3'){steps{echo "building"}	}
+						}
+}
+}
