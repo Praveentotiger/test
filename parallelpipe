@@ -1,10 +1,12 @@
-pipeline{
-	
-			stages{
-			parallel{
-				stage('build1'){steps{echo "building"}	}
-					stage('build2'){steps{echo "building"}	}
-						stage('build3'){steps{echo "building"}	}
-						}
-}
+pipeline {
+  agent any
+  stages {
+    stage('Parallel builds') {
+      parallel {
+        stage('build1') { steps { echo 'building build1'} }
+        stage('build2') { steps { echo 'building build2'} }
+        stage('build3') { steps { echo 'building build3'} }
+      }
+    }
+  }
 }
