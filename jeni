@@ -1,6 +1,6 @@
 pipeline {
   agent {
-  label 'slave1'
+  label 'praveen'
 }
   stages { 
      stage('build') {
@@ -10,12 +10,12 @@ pipeline {
                 steps { echo "hello d" 
                             sh 'sleep 5' }  }
     stage('deploy') {  agent {
-                      label 'slave1'
+                      label 'praveen'
                     }
                       steps { echo " hello" 
                               sh 'sleep 5'  }  }
     stage('test') { agent {
-                      label 'master'
+                      label 'ram'
                     }
                         steps {  echo "hello" 
                            sh 'sleep 5'  } }
