@@ -7,8 +7,8 @@ parameters {
   stages {
     stage('Parallel builds') {
       parallel {
-        stage('build1') { steps { echo 'building build1  $env and $branch'} }
-       
+        stage('build1') { steps { echo "building build1  $(params.env) "} }
+       stage('test') { steps { echo "building build1  $(params.branch)"} }
       }
     }
   }
