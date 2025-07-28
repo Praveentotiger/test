@@ -5,16 +5,13 @@ parameters {
 string defaultValue: 'test', description: 'building application', name: 'branch1'
   
 }
-environment {
-  ENV = "build"
-  branch1 = "branch"
-}
+
 
   stages {
     stage('Parallel builds') {
       parallel {
-        stage('build1') { steps { echo "building build1  $ENV"} }
-       stage('branch2') { steps { echo "building build1  $branch1"} }
+        stage('build1') { steps { echo "building building  $ENV"} }
+       stage('branch2') { steps { echo "building of branch in $branch1"} }
       }
     }
   }
