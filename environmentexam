@@ -1,1 +1,16 @@
-
+pipeline {
+  agent any
+parameters {
+  string defaultValue: 'build', description: 'building application', name: 'Env'
+  choice choices: ['test'], description: 'testing envirn', name: 'branch'
+}
+  stages {
+    stage('Parallel builds') {
+      parallel {
+        stage('build1') { steps { echo 'building build1'} }
+        stage('build2') { steps { echo 'building build2'} }
+        stage('build3') { steps { echo 'building build3'} }
+      }
+    }
+  }
+}
