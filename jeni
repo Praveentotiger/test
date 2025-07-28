@@ -18,6 +18,6 @@ pipeline {
                       label 'master'
                     }
                         steps {  echo "hello" 
-\                            sh 'sleep 5'  } }
+                           sh 'sleep 5'  } }
   }
 }
