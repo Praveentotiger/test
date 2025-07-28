@@ -2,8 +2,7 @@ pipeline {
   agent any
 parameters {
   string defaultValue: 'build', description: 'building application', name: 'ENV'
-string defaultValue: 'test', description: 'building application', name: 'branch1'
-  
+string defaultValue: 'test', description: 'building application', name: 'branch1' 
 }
 
 
