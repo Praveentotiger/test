@@ -3,7 +3,14 @@ agent any
 stages{
 stage('build'){ steps { echo "building project" }  }
 stage('some test'){steps{ echo "testing cases"} }
-stage('browser test'){steps { echo "testing on broweser"}}
+stage('browser test'){
+parallel{
+stage('chrome'){steps {echo "testing on chrome"}}
+stage('firefox'){steps {echo "testing on firefox"}}
+stage('internet explorer'){steps {echo "testing on internet explorer"}}
+stage('safari'){steps {echo "testing on safari"}}
+}
+}
 stage('Testing some other things'){steps{ echo "testing on some other cases"} }
 stage('static analysis'){steps{ echo "static analysis  cases"} }
 stage('Deploy'){steps{ echo "Deploying build "} }
