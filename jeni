@@ -7,14 +7,17 @@ pipeline {
                 agent {
                       label 'master'
                     } 
-                steps { echo "hello d" sh 'sleep 5' }  }
+                steps { echo "hello d" 
+                            sh 'sleep 5' }  }
     stage('deploy') {  agent {
                       label 'slave1'
                     }
-                      steps { echo " hello"  sh 'sleep 5'  }  }
+                      steps { echo " hello" 
+                              sh 'sleep 5'  }  }
     stage('test') { agent {
                       label 'master'
                     }
-                        steps {  echo "hello"  sh 'sleep 5'  } }
+                        steps {  echo "hello" 
+\                            sh 'sleep 5'  } }
   }
 }
