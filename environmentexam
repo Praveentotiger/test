@@ -2,14 +2,14 @@ pipeline {
   agent any
 parameters {
   string defaultValue: 'build', description: 'building application', name: 'Env'
-string defaultValue: 'branch', description: 'building application', name: 'branch'
+string defaultValue: 'branch', description: 'building application', name: 'branch1'
   
 }
   stages {
     stage('Parallel builds') {
       parallel {
         stage('build1') { steps { echo "building build1  $Env "} }
-       stage('branch') { steps { echo "building build1  $branch"} }
+       stage('branch') { steps { echo "building build1  $branch1"} }
       }
     }
   }
