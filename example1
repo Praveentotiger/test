@@ -13,6 +13,9 @@ stage('safari'){steps {echo "testing on safari"}}
 }
 stage('Testing some other things'){steps{ echo "testing on some other cases"} }
 stage('static analysis'){steps{ echo "static analysis  cases"} }
-stage('Deploy'){steps{ echo "Deploying build "} }
+stage('Deploy'){prallel {
+stage('cdeploy'){steps {echo "testing on deploy"}}
+stage('final'){steps {echo "testing on final"}}
+} }
 
 }}
