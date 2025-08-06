@@ -1,0 +1,23 @@
+pipeline{
+    agent any
+    stages{
+        stage('bild'){
+            steps{
+                echo "goood bild"
+
+            }
+        }
+        stage('test'){
+            steps{
+                echo "goood test"
+            }
+        
+        }
+        stage('deploy'){
+            steps{
+                echo "goood deploy"
+            }
+        
+        }
+    }
+}
