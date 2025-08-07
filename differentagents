@@ -1,0 +1,24 @@
+pipeline {
+agent none
+stages{
+stage('build'){
+  agent { label 'praveen' }
+        steps{
+              echo "build is triggered"
+              }
+              }
+stage('deploy'){
+  agent { label 'ram' }      
+          steps{
+              echo "deply is  sucess"
+              }
+              }
+stage('test'){
+            agent { label 'praveen' }
+        steps{
+            echo "tested  is build"
+              }
+              }
+
+}
+}
