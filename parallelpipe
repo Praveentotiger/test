@@ -4,7 +4,7 @@ pipeline {
     stage('Parallel builds') {
       parallel {
         stage('build1') { steps { echo 'building build1' 
-                                        sh sleep 5  } }
+                                        sh 'sleep 5'  } }
         stage('build2') { steps { echo 'building build2'} }
         stage('build3') { steps { echo 'building build3'} }
       }
