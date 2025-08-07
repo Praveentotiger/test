@@ -4,7 +4,7 @@ stages{
 stage('build'){
   agent { label 'praveen' }
         steps{
-              echo "build is triggered"
+              echo "build is triggered on server {label}"
               }
               }
 stage('deploy'){
