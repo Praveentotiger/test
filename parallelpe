@@ -5,7 +5,7 @@ pipeline {
             stages {
                 stage('build branches') {
                     parallel {
-                        stage('build1') { steps { echo 'build1' } }
+                        stage('build1') { steps { echo '       build1' } }
                         stage('build2') { steps { echo 'build2' } }
                         stage('build3') { steps { echo 'build3' } }
                     }
